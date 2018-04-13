@@ -1,0 +1,51 @@
+@0
+
+
+@1
+ MOV UP, ACC
+ MOV ACC, RIGHT
+ SWP
+ SUB RIGHT
+ MOV ACC, RIGHT
+
+@2
+#VAR B
+ MOV LEFT, ACC
+ MOV ACC, LEFT
+#ABS()
+ MOV LEFT, ACC
+ JGZ RETURN
+ NEG
+RETURN:
+ MOV ACC, DOWN
+
+@3
+
+
+@4
+
+
+@5
+
+
+@6
+#IS>=10?1:0
+START:
+ MOV UP, ACC
+ SUB 10
+ JLZ LT10
+ MOV 1, DOWN
+ JMP START
+LT10:
+ MOV 0, DOWN
+
+@7
+
+
+@8
+
+
+@9
+ MOV UP, DOWN
+
+@10
